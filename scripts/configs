@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-SRC_ROOT="$(dirname "$0")/../config"
+SRC_ROOT="$HOME/.dotfiles/config"
 CONFIG_DEST="$HOME/.config"
 
 # Symlink all config directories
