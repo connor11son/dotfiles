@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+set -e
+
+echo "Installing cargo packages (server setup)..."
+if ! command -v cargo &> /dev/null; then
+    echo "cargo not found. Please install Rust and Cargo first."
+    exit 1
+fi
+xargs -a packages/cargo-packages.txt -r cargo install
+echo "Server setup complete."

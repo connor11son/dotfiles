@@ -1,20 +1,17 @@
 #!/usr/bin/env bash
 
 set -e
+source ./scripts/env
 echo "Is this a desktop or server environment? (desktop/server)"
-
-bash ./scripts/server-setup.sh
-
 read -r ENV_TYPE
 if [[ "$ENV_TYPE" == "desktop" ]]; then
-    bash ./scripts/desktop-setup.sh
+    source ./scripts/desktop
 fi
 
+source ./scripts/server
+
 # Link bash config
-if [ -f ~/.bashrc ]; then
-    cp ~/.bashrc ~/.bashrc.backup
-fi
 ln -sf "$(pwd)/config/bash/.bashrc" ~/.bashrc
 
 # link all configs
-bash ./scripts/link-configs.sh
+source ./scripts/configs

@@ -1,6 +1,6 @@
-source ./shell
-source ./aliases
-source ./functions
-source ./init
-source ./envs
+source $HOME/.dotfiles/config/bash/shell
+source $HOME/.dotfiles/config/bash/aliases
+source $HOME/.dotfiles/config/bash/functions
+source $HOME/.dotfiles/config/bash/init
+source $HOME/.dotfiles/config/bash/envs
 # [[ $- == *i* ]] && bind -f ~/.local/share/dotfiles/default/bash/inputrc
