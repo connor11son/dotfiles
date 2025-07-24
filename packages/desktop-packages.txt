@@ -1,3 +1,4 @@
+alacritty
 google-chrome
 cursor-bin
 bitwarden-bin
