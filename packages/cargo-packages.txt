@@ -1,4 +1,4 @@
-exa
+eza
 ripgrep
 starship
 zellij
