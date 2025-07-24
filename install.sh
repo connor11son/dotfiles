@@ -10,8 +10,5 @@ fi
 
 source ./scripts/server
 
-# Link bash config
-ln -sf "$(pwd)/config/bash/.bashrc" ~/.bashrc
-
 # link all configs
 source ./scripts/configs
