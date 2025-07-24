@@ -1,0 +1,4 @@
+exa
+dust
+zoxide
+zellij
