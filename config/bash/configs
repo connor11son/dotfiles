@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+set -e
+
+SRC_ROOT="$HOME/.dotfiles/config"
+CONFIG_DEST="$HOME/.config"
+
+# Symlink all config directories
+for dir in "$SRC_ROOT"/*/; do
+    dirname=$(basename "$dir")
+    if [[ "$dirname" == "bash" ]]; then
+        continue
+    fi
+    src_dir="$SRC_ROOT/$dirname"
+    dest_dir="$CONFIG_DEST/$dirname"
+    mkdir -p "$dest_dir"
+    find "$src_dir" -type f | while read -r src_file; do
+        rel_path="${src_file#$src_dir/}"
+        dest_file="$dest_dir/$rel_path"
+        mkdir -p "$(dirname "$dest_file")"
+        # If the destination file exists and is not a symlink, back it up before removing
+        if [ -e "$dest_file" ] && [ ! -L "$dest_file" ]; then
+            backup_file="${dest_file}.bak.$(date +%Y%m%d%H%M%S)"
+            cp "$dest_file" "$backup_file"
+            echo "Backed up existing file $dest_file to $backup_file"
+            rm "$dest_file"
+        fi
+        ln -sf "$src_file" "$dest_file"
+    done
+    echo "Symlinked $dirname config to $dest_dir"
+done 
