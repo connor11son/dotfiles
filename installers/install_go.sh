@@ -2,7 +2,8 @@
 
 TOOLS_FILE="${HOME}/.dotfiles/packages/go.txt"
 
-while IFS= read -r tool; do
+# Ensure the last line is read even if it doesn't end with a newline
+while IFS= read -r tool || [[ -n "$tool" ]]; do
     # Skip empty lines and comments
     [[ -z "$tool" || "$tool" =~ ^[[:space:]]*# ]] && continue
 
