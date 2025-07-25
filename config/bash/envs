@@ -2,6 +2,6 @@
 #export EDITOR="vi"
 #export SUDO_EDITOR="$EDITOR"
 export PATH="$HOME/.cargo/bin:$PATH"
-export PATH=$PATH:~/.local/go/bin
+export PATH="$HOME/.local/go/bin:$PATH"
 
 ulimit -n 4096
