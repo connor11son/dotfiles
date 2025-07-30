@@ -7,6 +7,14 @@ while IFS= read -r pkg || [[ -n "$pkg" ]]; do
     # Skip empty lines and comments
     [[ -z "$pkg" || "$pkg" =~ ^[[:space:]]*# ]] && continue
 
-    echo "Installing $pkg..."
-    cargo install "$pkg"
+    # Check if this is a git installation (format: package:git:url)
+    if [[ "$pkg" =~ ^([^:]+):git:(.+)$ ]]; then
+        package_name="${BASH_REMATCH[1]}"
+        git_url="${BASH_REMATCH[2]}"
+        echo "Installing $package_name from git repository..."
+        cargo install --git "$git_url" "$package_name"
+    else
+        echo "Installing $pkg..."
+        cargo install "$pkg"
+    fi
 done < "$TOOLS_FILE"
