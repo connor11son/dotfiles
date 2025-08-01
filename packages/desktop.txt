@@ -3,3 +3,4 @@ google-chrome
 cursor-bin
 bitwarden-bin
 slack-desktop-wayland
+keyring
