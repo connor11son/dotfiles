@@ -2,5 +2,14 @@
     "window.commandCenter": true,
     "remote.SSH.remotePlatform": {
         "stitch": "linux"
-    }
+    },
+    "multiCommand.commands": [
+        {
+            "command": "multiCommand.custom_cursor",
+            "sequence": [
+                "editor.action.acceptCursorTabSuggestion",
+                "editor.cpp.disableenabled"
+            ]
+        }
+    ]
 }

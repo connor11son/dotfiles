@@ -5,3 +5,4 @@ bitwarden-bin
 slack-desktop-wayland
 claude-code
 gimp
+keychain

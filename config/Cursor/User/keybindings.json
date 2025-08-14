@@ -3,5 +3,19 @@
     {
         "key": "ctrl+i",
         "command": "composerMode.agent"
+    },
+    {
+        "key": "shift+right",
+        "command": "editor.action.enableCppGlobally"
+    },
+    {
+        "key": "right",
+        "command": "multiCommand.custom_cursor",
+        "when": "cpp.shouldAcceptTab && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible"
+    },
+    {
+        "key": "left",
+        "command": "editor.cpp.disableenabled",
+        "when": "cpp.shouldAcceptTab && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible"
     }
 ]
