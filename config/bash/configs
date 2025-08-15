@@ -26,5 +26,5 @@ for dir in "$SRC_ROOT"/*/; do
         fi
         ln -sf "$src_file" "$dest_file"
     done
-    echo "Symlinked $dirname config to $dest_dir"
-done 
+done
+echo "✅ Done symlinking all configs!" 

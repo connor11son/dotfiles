@@ -14,3 +14,26 @@ if command -v fzf &> /dev/null; then
     source /usr/share/fzf/key-bindings.bash
   fi
 fi
+
+if command -v keychain &> /dev/null; then
+    eval "$(keychain --eval id_ed25519)"
+fi
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/keyring/ssh"
+if command -v rustc &> /dev/null; then
+    if [[ "$(command -v rustc)" == "$HOME"* ]]; then
+        echo "✅ Using Rust from home directory: $(command -v rustc)"
+    else
+        echo "⚠️ Warning: rustc is not from your home directory! (using $(command -v rustc))"
+    fi
+fi
+
+if command -v go &> /dev/null; then
+    GO_PATH="$(command -v go)"
+    if [[ "$GO_PATH" == "$HOME"* ]]; then
+        echo "✅ Using Go from home directory: $GO_PATH"
+    else
+        echo "⚠️ Warning: go is not from your home directory! (using $GO_PATH)"
+    fi
+fi
+
+set +

@@ -4,4 +4,3 @@ source $HOME/.dotfiles/config/bash/functions
 source $HOME/.dotfiles/config/bash/configs
 source $HOME/.dotfiles/config/bash/init
 source $HOME/.dotfiles/config/bash/aliases
-# [[ $- == *i* ]] && bind -f ~/.local/share/dotfiles/default/bash/inputrc

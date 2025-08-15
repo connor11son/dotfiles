@@ -1,7 +1,10 @@
 {
     "window.commandCenter": true,
     "remote.SSH.remotePlatform": {
-        "stitch": "linux"
+        "4090": "linux",
+        "stitch": "linux",
+        "foaly": "linux",
+        "mind": "linux"
     },
     "multiCommand.commands": [
         {
@@ -11,5 +14,14 @@
                 "editor.cpp.disableenabled"
             ]
         }
-    ]
+    ],
+    "remote.SSH.noProxy": null,
+    "remote.SSH.enableAgentForwarding": true,
+    "remote.SSH.connectTimeout": 60,
+    "terminal.integrated.inheritEnv": true,
+    "remote.SSH.useLocalServer": false,
+    "database-client.autoSync": true,
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    }
 }
