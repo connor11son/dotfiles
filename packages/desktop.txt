@@ -6,3 +6,4 @@ slack-desktop-wayland
 claude-code
 gimp
 keychain
+rsync
