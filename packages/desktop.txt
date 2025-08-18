@@ -1,4 +1,5 @@
 alacritty
+aws-cli
 google-chrome
 cursor-bin
 bitwarden-bin

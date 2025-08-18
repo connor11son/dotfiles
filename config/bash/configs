@@ -27,4 +27,4 @@ for dir in "$SRC_ROOT"/*/; do
         ln -sf "$src_file" "$dest_file"
     done
 done
-echo "✅ Done symlinking all configs!" 
+[[ $- == *i* ]] && echo "✅ Done symlinking all configs!" 

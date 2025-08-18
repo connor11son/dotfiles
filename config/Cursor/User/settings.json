@@ -15,7 +15,7 @@
             ]
         }
     ],
-    "remote.SSH.noProxy": null,
+    "remote.SSH.noProxy": "null",
     "remote.SSH.enableAgentForwarding": true,
     "remote.SSH.connectTimeout": 60,
     "terminal.integrated.inheritEnv": true,
@@ -23,5 +23,24 @@
     "database-client.autoSync": true,
     "extensions.experimental.affinity": {
         "asvetliakov.vscode-neovim": 1
-    }
+    },
+    "workbench.colorTheme": "Aura Soft Dark",
+    "workbench.activityBar.location": "hidden",
+    "workbench.editor.showTabs": "multiple",
+    "workbench.startupEditor": "none",
+    "workbench.minimap.enabled": false,
+    "breadcrumbs.enabled": false,
+    "workbench.tree.indent": 16,
+    "explorer.compactFolders": false,
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "window.titleBarStyle": "native",
+    "window.customTitleBarVisibility": "never",
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.cursorBlinking": "blink",
+    "editor.cursorStyle": "line",
+    "editor.fontFamily": "'Droid Sans Mono', 'monospace', monospace",
+    "editor.stickyScroll.enabled": true,
+    "editor.lineNumbers": "relative",
+    "extensions.ignoreRecommendations": true,
 }
