@@ -1,21 +1,46 @@
 // Place your key bindings in this file to override the defaults
 [
     {
-        "key": "ctrl+i",
+        "key": "ctrl+shift+i",
         "command": "composerMode.agent"
     },
     {
-        "key": "shift+right",
+        "key": "ctrl+shift+l",
+        "command": "composerMode.chat"
+    },
+    {
+        "key": "ctrl+shift+Tab",
         "command": "editor.action.enableCppGlobally"
     },
     {
-        "key": "right",
+        "key": "shift+right",
         "command": "multiCommand.custom_cursor",
         "when": "cpp.shouldAcceptTab && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible"
     },
     {
-        "key": "left",
+        "key": "shift+left",
         "command": "editor.cpp.disableenabled",
         "when": "cpp.shouldAcceptTab && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible"
+    },
+    {
+        "key": "ctrl+shift+b",
+        "command": "workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "ctrl+shift+right",
+        "command": "workbench.action.nextEditor"
+    },
+    {
+        "key": "ctrl+shift+left",
+        "command": "workbench.action.previousEditor"
+    }
+    ,
+    {
+        "key": "ctrl+shift+o",
+        "command": "workbench.action.quickOpen"
+    },
+    {
+        "key": "ctrl+shift+w",
+        "command": "workbench.action.closeActiveEditor"
     }
 ]
