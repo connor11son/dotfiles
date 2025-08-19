@@ -11,4 +11,9 @@ fi
 
 # Set complete path
 export PATH="./bin:$HOME/.local/bin:$HOME/.local/share/omarchy/bin:$PATH"
+
+# if bob is installed use its nvim
+if command -v bob &> /dev/null; then
+  export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
+fi
 set +h

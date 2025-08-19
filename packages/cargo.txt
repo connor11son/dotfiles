@@ -1,7 +1,9 @@
 bat
+bob-nvim
 eza
 ripgrep
 starship
 zellij
 zoxide
 uv:git:https://github.com/astral-sh/uv
+

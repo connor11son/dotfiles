@@ -8,3 +8,4 @@ claude-code
 gimp
 keychain
 rsync
+zoom
