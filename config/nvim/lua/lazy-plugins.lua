@@ -27,8 +27,8 @@ require('lazy').setup({
 
   require 'custom.plugins.which-key',
 
-  require 'custom.plugins.telescope',
-
+  --require 'custom.plugins.telescope',
+  require 'custom.plugins.snacks',
   require 'custom.plugins.lspconfig',
 
   require 'custom.plugins.conform',
