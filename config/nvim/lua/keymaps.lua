@@ -48,5 +48,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.hl.on_yank()
   end,
 })
+-- keymaps for quiting
+vim.keymap.set('n', '<leader>q', ':qa<CR>', { desc = 'Quit Neovim' })
 
 -- vim: ts=2 sts=2 sw=2 et
